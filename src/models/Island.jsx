@@ -132,7 +132,7 @@ const Island = ({isRotating , setIsRotating,setCurrentStage , ...props}) => {
         
         geometry={nodes.Object_2.geometry}
         material={materials['Scene_-_Root']}
-        rotation={[-Math.PI / 2, 0, 0]}
+        rotation={[-Math.PI / 2, 0.01, 0.8]}
       />
         </a.group>
     )

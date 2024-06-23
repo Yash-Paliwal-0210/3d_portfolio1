@@ -33,14 +33,14 @@ const Home = () => {
 
     const adjustIslandForScreenSize=() =>{
         let screenScale = null;
-        let screenPosition = [4.5, -7.8 ,-90];
-        let rotation = [0.23, 0, 0];
+        let screenPosition = [0, -10.8 ,-100];
+        let rotation = [0.3, 3, 0];
         
         if( window.innnerWidth <768){
             screenScale = [0.2, 0.2, 0.2];    
         }
         else{
-            screenScale = [0.3, 0.32 , 0.3];
+            screenScale = [0.35, 0.35 , 0.32];
             
         }
         return [screenScale , screenPosition , rotation];
@@ -72,8 +72,8 @@ const Home = () => {
             </div>
         <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' :'cursor-grab'}`} camera={{near: 0.1 , far: 1000}}>
             <Suspense fallback = {<Loader />}>
-                <directionalLight position={[1,1,1]} intensity={2}/>
-                <ambientLight intensity={0.5}/>
+                <directionalLight position={[0.3,5,3]} intensity={4}/>
+                <ambientLight intensity={0.9}/>
                 
                 <spotLight/>
                 <hemisphereLight skyColor= "b1e1ff" groundColor="#000000" intensity={1}/>
